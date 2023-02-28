@@ -1,15 +1,13 @@
 package pl.animalscharityapp.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Getter
 @Setter
 @Entity(name = "user_app")
@@ -26,6 +24,9 @@ public class User {
     private Integer phone;
     @OneToMany
     private List<Dog> dog;
+
+    @OneToMany
+    private List<Advert> adverts;
 
 
 }
